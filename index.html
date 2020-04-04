@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator_01</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-sm-4">
+			<input type="text" id="Show" readonly="readonly" class="form-control text-info">
+
+				<div class="row no-gutters"><br>
+				<button type="button"class="btn-sm btn-info col-4" onclick="One()">1</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Two()">2</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Three()">3</button>
+				</div>
+			    <div class="row no-gutters"><br>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Four()">4</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Five()">5</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Six()">6</button>
+			</div>
+
+		      <div class="row no-gutters"><br>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Seven()">7</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Eight()">8</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Nine()">9</button>
+				</div>
+			<div class="row no-gutters"><br>
+				
+				<button type="button"class="btn-sm btn-info col-4" onclick=" Dot()">.</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Zero()">0</button>
+				<button type="button" class="btn-sm btn-info col-4"onclick="Addition()">+</button>
+				</div>
+			<div class="row no-gutters"><br>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Subtraction()">-</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Multiplication()">*</button>
+				<button type="button"class="btn-sm btn-info col-4" onclick="Division()">/</button>
+				</div>
+			<div class="row no-gutters"><br>
+				<button type="button"class="btn-sm btn-outline-info col-6" onclick="Delete()">DEL</button>
+				<button type="button"class="btn-sm btn-outline-info col-6" onclick="All_Clear()">AC</button>
+			</div>
+
+				<div class="row no-gutters"><br>
+                <button type="button"class="btn-sm btn-outline-info col-12" onclick="Equal()">=</button>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+
+
+<script>
+	var a = document.getElementById('Show');
+
+	function One(){
+		a.value += "1";
+	}
+	function Two(){
+		a.value += "2";
+	}
+	function Three(){
+		a.value += "3";
+	}
+	function Four(){
+		a.value += "4";
+	}
+
+function Five(){
+		a.value += "5";
+	}
+	function Six(){
+		a.value += "6";
+	}
+
+function Seven(){
+		a.value += "7";
+	}
+	function Eight(){
+		a.value += "8";
+	}
+
+function Nine(){
+		a.value += "9";
+	}
+
+
+function Zero(){
+		a.value += "0";
+	}
+	function Addition(){
+		a.value += "+";
+	}
+
+function Subtraction(){
+		a.value += "-";
+	}
+	function Multiplication(){
+		a.value  += "*";
+	}
+
+function Division(){
+		a.value+= "/";
+	}
+	function Dot(){
+		a.value += ".";
+	}
+
+function All_Clear(){
+		a.value = " ";
+	}
+	function Delete(){
+		var b = a.value;
+		a.value = b.substring(0, b.length - 1);
+	}
+
+
+	function Equal(){
+		
+		a.value = eval(a.value);
+	}
+
+
+</script>
+
+</body>
+</html>
